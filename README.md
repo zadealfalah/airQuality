@@ -12,6 +12,8 @@ Air Quality Modeling and Forecasting
 ## General Info
 This project attempts to model and forecast average CO concentrations based on data from the UCI ML Repository.  The bulk of the project is in a Python Notebook.  This notebook serves as both a first foray into time-series analysis as well as a look at some new packages (e.g. hyperopt).
 
+The airQualityForecast.ipynb file focuses on EDA and XGBoost tuning via hyperopt.  The sklearnForecasting.ipynb file focuses on playing around with modeling with sklearn - modeling which I have previously done with sms.ols instead.  
+
 ## Technologies
 Project was created with a Python Notebook using Python version 3.9.13 in VSCode
 
@@ -52,8 +54,11 @@ Creating a TimeSeriesSplit as opposed to a  date-defined 80-20 split seemed to c
 ## Future Work
 Some things which I would like to add on in the future include:
 - Clean up notebook, move images to data/miscImages or something to save but de-clutter.
+- Move functions to airCleaningFcts.py or something, call in from there for further de-cluttering of nb
 - Combining the large search space of the XGBoost model with HYPEROPT with sklearn's TimeSeriesSplit for a more robust model.  The reason that this was not done in the first place was the time and cost of such an extensive search.  It may end up being the case that a smaller space is defined for our search before this is done.
 - Creating a PowerBI or Tableau presentation.  These are both technologies that I have used but don't have much to show for it.  It could be nice to add some basic presentations with these to show competency. 
+- Recreate sms.ols knowledge in sklearnForecasting with sklearn
+- Create optimization pipeline with MLflow to play around with it
 
 ## Data Citation
 https://archive.ics.uci.edu/ml/datasets/Air+Quality
